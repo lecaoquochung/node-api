@@ -1,0 +1,16 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "API with node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "lecaoquochung@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "app-module-path": "^2.0.0",
+    "express": "^4.14.0"
+  }
+}
