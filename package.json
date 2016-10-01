@@ -8,16 +8,33 @@
   },
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "nodeunit test",
+    "coveralls": "jscoverage lib && QUICKSORT_COV=1 nodeunit --reporter=lcov test | coveralls"
   },
   "author": "lecaoquochung@gmail.com",
   "license": "ISC",
   "dependencies": {
     "app-module-path": "^2.0.0",
-    "express": "^4.14.0"
+    "blanket": "^1.2.3",
+    "bluebird": "^3.4.6",
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "lodash": "^4.16.2",
+    "mocha": "^3.1.0",
+    "nodeunit": "^0.10.2",
+    "promise": "^7.1.1"
   },
   "devDependencies": {
-    "coveralls": "^2.11.14"
+    "coveralls": "^2.11.14",
+    "mocha": "^3.1.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "/",
+      "data-cover-never": [
+        "node_modules",
+        "tests"
+      ]
+    }
   }
 }

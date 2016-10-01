@@ -21,7 +21,7 @@ app.get("/api/v2/ping", statusesController.ping);
 // Error handling middleware
 app.use(function(err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send('ERROR: Something is missing');
 });
 
 // Server
