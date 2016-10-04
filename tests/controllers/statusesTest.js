@@ -13,13 +13,14 @@ var statusesController = require("controllers/statuses");
 
 describe("controllers/statuses", function () {
 
-    describe("#ping"), function() {
+    describe("#ping"), function(done) {
 
         it("Return pong", function(done) {
             var data = {};
 
             testUtilities.simulateEndpoint(statusesController.ping, data)
             .then(function(res) {
+                console.log("/////////////" + JSON.stringify(res));
                 assert.equal(res.code, 404);
                 done();
             });

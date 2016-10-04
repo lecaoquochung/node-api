@@ -2,6 +2,8 @@
 - [ ] Vendor package with package.json
 - [ ] CI Server & Code Coverage
 - [ ] Test case
+- [ ] Request validation
+- [ ] Database & Migration
 
 # Vendor package with package.json
 ## app-module-path
@@ -21,6 +23,7 @@ require('app-module-path').addPath(__dirname);
 - Middleware http://expressjs.com/en/guide/writing-middleware.html
 - Error handling http://expressjs.com/en/guide/error-handling.html
 - https://github.com/expressjs/express
+- http://expressjs.com/en/api.html#req.params
 
 ## child-process
 - ?
@@ -114,4 +117,34 @@ npm install --save-dev mocha
 ## nodeunit
 ```
 npm install nodeunit --save
+npm install sinon --save // mockup
 ```
+
+# Database & Migration
+- [ ] Sequelize
+- [x] Reference
+
+## Sequelize
+- Install
+```
+# install express
+npm install express-generator --save
+
+# express-example
+express -f // init expess skeleton
+```
+
+# install ORM , CLI and SQLite dialect
+npm install --save sequelize sequelize-cli sqlite3
+
+# generate models
+node_modules/.bin/sequelize init
+node_modules/.bin/sequelize model:create --name User --attributes username:string
+node_modules/.bin/sequelize model:create --name Task --attributes title:string
+```
+
+## Reference
+- Research https://www.quora.com/What-are-my-options-for-SQL-database-migrations-with-Node-js
+- Phinx https://github.com/robmorgan/phinx
+- Sequelize https://github.com/sequelize/sequelize
+- Sequelize & Express https://github.com/sequelize/express-example
