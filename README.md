@@ -4,6 +4,7 @@
 - [ ] Test case
 - [ ] Request validation
 - [ ] Database & Migration
+- [ ] Restful API
 
 # Vendor package with package.json
 ## app-module-path
@@ -148,3 +149,5 @@ node_modules/.bin/sequelize model:create --name Task --attributes title:string
 - Phinx https://github.com/robmorgan/phinx
 - Sequelize https://github.com/sequelize/sequelize
 - Sequelize & Express https://github.com/sequelize/express-example
+
+# Restful API
