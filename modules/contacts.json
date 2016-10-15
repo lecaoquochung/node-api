@@ -1,0 +1,12 @@
+{
+"firstname": "Hung",
+"lastname": "Le",
+"title": "Mr.",
+"company": "Node Api Inc.",
+"jobtitle": "Developer",
+"primarycontactnumber": "+818051616868",
+"othercontactnumbers": ["+818051616868", "+818051616868"],
+"primaryemailaddress": "lecaoquochung@",
+"emailaddresses": ["lecaoquochung@"],
+"groups": ["Dev", "Family"]
+}

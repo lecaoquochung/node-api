@@ -1,22 +1,37 @@
 "use strict"
 
-// path at top level module
+// Path at top level module
 require("app-module-path").addPath(__dirname);
 
 // Express
 var express = require('express');
-var app = express();
+
+// Middlewares
+var bodyParser = require('body-parser');
+var url = require('url');
 
 // Controller
 var statusesController = require("controllers/statuses");
+var samplesController = require("controllers/samples");
 
-// route
+// Create app
+var app = express();
+
+// Use middlewares
+app.use(bodyParser.json())
+
+// Route
 app.get("/api", function(req, res){
 	res.send("NODE API");
 });
 
-app.get("/api/v2/ping", statusesController.ping);
+// statusesController
+app.get("/api/v1/ping", statusesController.ping);
 
+// samplesController
+app.get("/api/v1/samples/hello", samplesController.sayHello);
+app.get("/api/v1/samples/hello/:name", samplesController.sayHelloToSomeone);
+// app.get("/api/v1/samples/contacts", samplesController.getContacts);
 
 // Error handling middleware
 app.use(function(err, req, res, next) {
