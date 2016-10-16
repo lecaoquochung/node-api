@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 function read_json_file() {
-    var file = './data/contacts.json';
+    var file = 'db/contacts.json';
 
     return fs.readFileSync(file);
 }

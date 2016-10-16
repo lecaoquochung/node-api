@@ -1,6 +1,8 @@
 "use strict"
 
-var url = require('url');
+require("app-module-path").addPath(__dirname + "/../");
+
+var contactsJSON = require('modules/contacts');
 
 var samplesController = {};
 

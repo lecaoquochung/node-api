@@ -18,7 +18,7 @@ var samplesController = require("controllers/samples");
 var app = express();
 
 // Use middlewares
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Route
 app.get("/api", function(req, res){
