@@ -13,6 +13,7 @@ var url = require('url');
 // Controller
 var statusesController = require("controllers/statuses");
 var samplesController = require("controllers/samples");
+var stringsController = require("controllers/strings");
 
 // Create app
 var app = express();
@@ -32,6 +33,9 @@ app.get("/api/v1/ping", statusesController.ping);
 app.get("/api/v1/samples/hello", samplesController.sayHello);
 app.get("/api/v1/samples/hello/:name", samplesController.sayHelloToSomeone);
 // app.get("/api/v1/samples/contacts", samplesController.getContacts);
+
+// stringsController
+app.get("/api/v1/strings/toUppsercase/:string", stringsController.toUppercase);
 
 // Error handling middleware
 app.use(function(err, req, res, next) {

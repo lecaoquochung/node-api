@@ -27,7 +27,8 @@
     "sequelize": "^3.24.3",
     "sequelize-cli": "^2.4.0",
     "sinon": "^1.17.6",
-    "sqlite3": "^3.1.4"
+    "sqlite3": "^3.1.4",
+    "validator": "^6.1.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.14",
